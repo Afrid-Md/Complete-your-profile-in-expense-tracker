@@ -1,7 +1,8 @@
-import { Navbar, Container, Button } from "react-bootstrap";
+import { Navbar,Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import AuthContext from "../../auth/auth-context/auth-context";
 import { useContext } from "react";
+import './Navbar.css';
 
 function NavBar() {
   const history = useHistory();
@@ -14,8 +15,8 @@ function NavBar() {
       {
         method: "POST",
         body: JSON.stringify({
-          idToken:authCtx.token,
-          requestType:"VERIFY_EMAIL",
+          idToken: authCtx.token,
+          requestType: "VERIFY_EMAIL",
         }),
         headers: {
           "Content-Type": "application/json",
@@ -42,24 +43,35 @@ function NavBar() {
   const openProfile = () => {
     history.replace("/profilePage");
   };
+
+  const logOutHandler=()=>{
+    authCtx.logout();
+    history.replace('/signin-page');
+  }
+
+
   return (
     <Navbar
       bg="light"
       variant="dark"
-      style={{ borderBottom: "1px solid black" }}
-    >
-      <Container>
-        <h1>Welcome to expense tracker!!!</h1>
-      </Container>
+      style={{ borderBottom: "1px solid black",display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center' }}
 
-      <Container>
-        <Button variant="outline-secondary" onClick={verifyEmailHandler}>
+    >
+      <div className="headingwelcome">
+        <h1>Welcome to expense tracker!!!</h1>
+      </div>
+
+      <div className='butttonsss'>
+        <Button variant="outline-secondary" onClick={verifyEmailHandler} className='buttonn'>
           verify email
         </Button>
-        <Button variant="outline-primary" onClick={openProfile}>
+        <Button variant="outline-primary" onClick={openProfile} className='buttonn'>
           complete your profile
         </Button>
-      </Container>
+        <Button variant="danger" className='buttonn' onClick={logOutHandler}>Log out</Button>
+      </div>
     </Navbar>
   );
 }

@@ -1,0 +1,18 @@
+.headingwelcome{
+    margin-left: 50px;
+}
+
+.navvbaarr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.butttonsss{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttonn{
+    margin: 20px;
+}
