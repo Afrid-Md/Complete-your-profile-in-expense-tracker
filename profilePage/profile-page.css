@@ -1,0 +1,61 @@
+
+.profilePage{
+    display: flex;
+    border-top: 1px solid gray;
+    text-align: center;
+    margin-top: 60px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact{
+    padding-top:30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.profileForm{
+    margin-left: 280px;
+}
+
+input{
+    width: 300px;
+}
+
+.labell{
+    margin-left: 30px;
+    margin-right: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input:focus{
+    background-color: rgb(255, 241, 241);
+}
+
+form{
+    margin-top: 50px;
+}
+
+.updateButton{
+    margin-left: 310px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(180, 180, 232);
+}
+
+.profileUpdated{
+    color: rgb(0, 255, 0);
+    font-family:monospace;
+    margin-left: 310px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.error01{
+    color: red;
+    font-family: monospace;
+    margin-left: 310px;
+    font-size: 20px;
+    margin-top: 30px;
+}
